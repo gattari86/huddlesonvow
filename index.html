@@ -1398,6 +1398,150 @@
             line-height: 1.8;
         }
 
+        /* Things To Do Section */
+        .things-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+
+        .thing-card {
+            background: var(--ivory);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--warm-beige);
+        }
+
+        .thing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .thing-icon {
+            background: var(--soft-sage);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .thing-icon i {
+            font-size: 1.5rem;
+            color: var(--charcoal);
+        }
+
+        .thing-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .thing-card p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: var(--warm-gray);
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        .photo-sharing {
+            max-width: 600px;
+            margin: 4rem auto 0;
+        }
+
+        .photo-sharing-card {
+            background: var(--soft-gold);
+            padding: 3rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .photo-icon {
+            background: var(--ivory);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .photo-icon i {
+            font-size: 2rem;
+            color: var(--charcoal);
+        }
+
+        .photo-sharing-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .photo-sharing-card p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: var(--warm-gray);
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .photo-share-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--charcoal);
+            color: var(--ivory);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid var(--charcoal);
+        }
+
+        .photo-share-button:hover {
+            background: var(--ivory);
+            color: var(--charcoal);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .photo-share-button i {
+            font-size: 1.1rem;
+        }
+
+        @media (max-width: 768px) {
+            .things-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                margin: 2rem auto;
+            }
+
+            .thing-card {
+                padding: 1.5rem;
+            }
+
+            .photo-sharing-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+
         /* Story Section */
         .story-section {
             max-width: 800px;
@@ -1824,6 +1968,10 @@
                     <button onclick="scrollToSection('family')" class="filter-btn">
                         <i class="ph ph-camera"></i>
                         <span data-en="Family Photos" data-es="Fotos Familiares">Family Photos</span>
+                    </button>
+                    <button onclick="scrollToSection('things')" class="filter-btn">
+                        <i class="ph ph-map-pin"></i>
+                        <span data-en="Things To Do" data-es="Qué Hacer">Things To Do</span>
                     </button>
                     <button onclick="scrollToSection('faq')" class="filter-btn">
                         <i class="ph ph-question"></i>
@@ -2323,6 +2471,109 @@
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
                         </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Things To Do Section -->
+        <section id="things-section" class="section section-light">
+            <h2 class="section-title" data-aos="fade-up" data-en="Things To Do in Riviera Maya" data-es="Qué Hacer en Riviera Maya">Things To Do in Riviera Maya</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-en="Explore these amazing activities during your free time" data-es="Explora estas increíbles actividades durante tu tiempo libre">Explore these amazing activities during your free time</p>
+
+            <div class="things-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="thing-card">
+                    <div class="thing-icon">
+                        <i class="ph ph-waves"></i>
+                    </div>
+                    <h3 data-en="Chichen Itza Day Trip" data-es="Excursión a Chichen Itzá">Chichen Itza Day Trip</h3>
+                    <p data-en="Visit one of the New Seven Wonders of the World, this ancient Mayan city is a must-see archaeological site" data-es="Visita una de las Nuevas Siete Maravillas del Mundo, esta antigua ciudad maya es un sitio arqueológico imperdible">Visit one of the New Seven Wonders of the World, this ancient Mayan city is a must-see archaeological site</p>
+                </div>
+
+                <div class="thing-card">
+                    <div class="thing-icon">
+                        <i class="ph ph-drop"></i>
+                    </div>
+                    <h3 data-en="Cenote Swimming" data-es="Nadar en Cenotes">Cenote Swimming</h3>
+                    <p data-en="Swim in crystal-clear freshwater pools in underground caves. Popular cenotes include Dos Ojos, Gran Cenote, and Cenote Azul" data-es="Nada en piscinas de agua dulce cristalina en cuevas subterráneas. Los cenotes populares incluyen Dos Ojos, Gran Cenote y Cenote Azul">Swim in crystal-clear freshwater pools in underground caves. Popular cenotes include Dos Ojos, Gran Cenote, and Cenote Azul</p>
+                </div>
+
+                <div class="thing-card">
+                    <div class="thing-icon">
+                        <i class="ph ph-compass"></i>
+                    </div>
+                    <h3 data-en="Tulum Ruins" data-es="Ruinas de Tulum">Tulum Ruins</h3>
+                    <p data-en="Explore ancient Mayan ruins perched on cliffs overlooking the Caribbean Sea - one of Mexico's most scenic archaeological sites" data-es="Explora antiguas ruinas mayas ubicadas en acantilados con vista al Mar Caribe - uno de los sitios arqueológicos más pintorescos de México">Explore ancient Mayan ruins perched on cliffs overlooking the Caribbean Sea - one of Mexico's most scenic archaeological sites</p>
+                </div>
+
+                <div class="thing-card">
+                    <div class="thing-icon">
+                        <i class="ph ph-mask-happy"></i>
+                    </div>
+                    <h3 data-en="Snorkeling at Mesoamerican Reef" data-es="Snorkel en el Arrecife Mesoamericano">Snorkeling at Mesoamerican Reef</h3>
+                    <p data-en="Discover the second-largest coral reef system in the world. Spot colorful fish, sea turtles, and vibrant coral formations" data-es="Descubre el segundo sistema de arrecifes de coral más grande del mundo. Observa peces coloridos, tortugas marinas y formaciones de coral vibrantes">Discover the second-largest coral reef system in the world. Spot colorful fish, sea turtles, and vibrant coral formations</p>
+                </div>
+
+                <div class="thing-card">
+                    <div class="thing-icon">
+                        <i class="ph ph-tree-palm"></i>
+                    </div>
+                    <h3 data-en="Xcaret Eco-Archaeological Park" data-es="Parque Eco-Arqueológico Xcaret">Xcaret Eco-Archaeological Park</h3>
+                    <p data-en="Experience Mexico's natural and cultural heritage with underground rivers, butterfly pavilion, and spectacular evening shows" data-es="Experimenta el patrimonio natural y cultural de México con ríos subterráneos, pabellón de mariposas y espectáculos nocturnos espectaculares">Experience Mexico's natural and cultural heritage with underground rivers, butterfly pavilion, and spectacular evening shows</p>
+                </div>
+
+                <div class="thing-card">
+                    <div class="thing-icon">
+                        <i class="ph ph-boat"></i>
+                    </div>
+                    <h3 data-en="Isla Mujeres Day Trip" data-es="Excursión a Isla Mujeres">Isla Mujeres Day Trip</h3>
+                    <p data-en="Take a ferry to this charming island paradise. Enjoy pristine beaches, golf cart tours, and fresh seafood" data-es="Toma un ferry a este encantador paraíso isleño. Disfruta de playas vírgenes, tours en carrito de golf y mariscos frescos">Take a ferry to this charming island paradise. Enjoy pristine beaches, golf cart tours, and fresh seafood</p>
+                </div>
+
+                <div class="thing-card">
+                    <div class="thing-icon">
+                        <i class="ph ph-fish"></i>
+                    </div>
+                    <h3 data-en="Deep Sea Fishing" data-es="Pesca en Alta Mar">Deep Sea Fishing</h3>
+                    <p data-en="Charter a boat for world-class fishing. Target marlin, sailfish, mahi-mahi, and tuna in the deep Caribbean waters" data-es="Alquila un barco para pesca de clase mundial. Busca marlin, pez vela, dorado y atún en las aguas profundas del Caribe">Charter a boat for world-class fishing. Target marlin, sailfish, mahi-mahi, and tuna in the deep Caribbean waters</p>
+                </div>
+
+                <div class="thing-card">
+                    <div class="thing-icon">
+                        <i class="ph ph-shopping-bag"></i>
+                    </div>
+                    <h3 data-en="Playa del Carmen Fifth Avenue" data-es="Quinta Avenida de Playa del Carmen">Playa del Carmen Fifth Avenue</h3>
+                    <p data-en="Stroll along the famous pedestrian street filled with shops, restaurants, street performers, and vibrant nightlife" data-es="Pasea por la famosa calle peatonal llena de tiendas, restaurantes, artistas callejeros y vida nocturna vibrante">Stroll along the famous pedestrian street filled with shops, restaurants, street performers, and vibrant nightlife</p>
+                </div>
+
+                <div class="thing-card">
+                    <div class="thing-icon">
+                        <i class="ph ph-camera"></i>
+                    </div>
+                    <h3 data-en="Sian Ka'an Biosphere Reserve" data-es="Reserva de la Biosfera Sian Ka'an">Sian Ka'an Biosphere Reserve</h3>
+                    <p data-en="Explore this UNESCO World Heritage site with pristine nature, bird watching, and boat tours through mangrove channels" data-es="Explora este sitio del Patrimonio Mundial de la UNESCO con naturaleza prístina, observación de aves y tours en bote por canales de manglares">Explore this UNESCO World Heritage site with pristine nature, bird watching, and boat tours through mangrove channels</p>
+                </div>
+
+                <div class="thing-card">
+                    <div class="thing-icon">
+                        <i class="ph ph-wine"></i>
+                    </div>
+                    <h3 data-en="Cozumel Island Adventure" data-es="Aventura en Isla Cozumel">Cozumel Island Adventure</h3>
+                    <p data-en="Take a ferry to Mexico's top diving destination. Perfect for scuba diving, beach clubs, and duty-free shopping" data-es="Toma un ferry al destino de buceo más importante de México. Perfecto para buceo, clubes de playa y compras libres de impuestos">Take a ferry to Mexico's top diving destination. Perfect for scuba diving, beach clubs, and duty-free shopping</p>
+                </div>
+            </div>
+
+            <!-- Photo Sharing Section -->
+            <div class="photo-sharing" data-aos="fade-up" data-aos-delay="300">
+                <div class="photo-sharing-card">
+                    <div class="photo-icon">
+                        <i class="ph ph-camera-plus"></i>
+                    </div>
+                    <h3 data-en="Share Your Photos" data-es="Comparte Tus Fotos">Share Your Photos</h3>
+                    <p data-en="Capture memories and share them with everyone! Upload your photos from the celebration and your adventures." data-es="¡Captura recuerdos y compártelos con todos! Sube tus fotos de la celebración y tus aventuras.">Capture memories and share them with everyone! Upload your photos from the celebration and your adventures.</p>
+                    <a href="https://photos.app.goo.gl/CV7USybDARLnA26d6" target="_blank" class="photo-share-button">
+                        <i class="ph ph-upload"></i>
+                        <span data-en="Upload Photos" data-es="Subir Fotos">Upload Photos</span>
                     </a>
                 </div>
             </div>
@@ -3035,6 +3286,7 @@ END:VCALENDAR`;
                 'resort': 'resort-section',
                 'travel': 'travel-section',
                 'family': 'family-section',
+                'things': 'things-section',
                 'faq': 'faq-section',
                 'rsvp': 'rsvp-section'
             };
