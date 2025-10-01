@@ -2481,10 +2481,14 @@
     </div>
 
     <!-- Audio Element for Background Music -->
-    <audio id="backgroundMusic" loop preload="metadata" volume="0.4">
+    <audio id="backgroundMusic" loop preload="metadata" volume="0.3">
+        <!-- Primary romantic song - replace with your chosen file -->
+        <source src="./assets/audio/romantic-song.mp3" type="audio/mpeg">
+        <source src="./assets/audio/romantic-song.wav" type="audio/wav">
+        <!-- Fallback romantic piano/violin songs -->
+        <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
         <source src="https://www.bensound.com/bensound-music/bensound-memories.mp3" type="audio/mpeg">
-        <source src="https://www.soundjay.com/misc/sounds/piano-moment.mp3" type="audio/mpeg">
-        <source src="https://assets.mixkit.co/music/preview/mixkit-a-very-happy-christmas-897.mp3" type="audio/mpeg">
         <!-- Multiple fallback sources for better compatibility -->
     </audio>
 
