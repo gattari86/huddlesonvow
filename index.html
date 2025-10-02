@@ -2003,6 +2003,45 @@
                 font-size: 0.9rem !important;
             }
         }
+
+        /* Desktop-specific adjustments for travel help section height */
+        @media (min-width: 769px) {
+            .travel-help-section div[style*="padding: 2.5rem"] {
+                padding: 1.5rem 2.5rem !important;
+            }
+
+            .travel-help-section div[style*="width: 80px"] {
+                width: 60px !important;
+                height: 60px !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .travel-help-section div[style*="width: 80px"] i {
+                font-size: 1.5rem !important;
+            }
+
+            .travel-help-section h3[style*="font-size: 2rem"] {
+                font-size: 1.6rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .travel-help-section p[style*="margin-bottom: 2rem"] {
+                margin-bottom: 1.5rem !important;
+            }
+
+            .travel-help-section h4[style*="margin-bottom: 0.5rem"] {
+                margin-bottom: 0.25rem !important;
+            }
+
+            .travel-help-section p[style*="margin-bottom: 2rem"]:last-of-type {
+                margin-bottom: 1.5rem !important;
+            }
+
+            .travel-help-section div[style*="margin-bottom: 1.5rem"] {
+                margin-bottom: 1rem !important;
+            }
+        }
+
         /* Phosphor Icons Styling */
         i[class^="ph-"] {
             display: inline-block;
