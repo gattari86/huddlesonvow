@@ -2072,11 +2072,33 @@
             background: rgba(245, 230, 211, 0.7);
             z-index: 0;
             pointer-events: none;
+            transform: none !important;
+            transition: none !important;
+            animation: none !important;
         }
 
         #family-section > * {
             position: relative;
             z-index: 1;
+        }
+
+        /* Disable any hover effects and animations on Our Story section */
+        #family-section,
+        #family-section *,
+        #family-section::before,
+        #family-section::after {
+            transform: none !important;
+            transition: none !important;
+            animation: none !important;
+        }
+
+        #family-section:hover,
+        #family-section:hover *,
+        #family-section:hover::before,
+        #family-section:hover::after {
+            transform: none !important;
+            transition: none !important;
+            animation: none !important;
         }
 
         /* Mobile optimization for background */
