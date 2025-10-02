@@ -409,6 +409,33 @@
             background: var(--sand);
         }
 
+        /* Welcome Section with Background Image */
+        .welcome-section {
+            position: relative;
+            background: var(--sand);
+        }
+
+        .welcome-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/assets/images/welcome-background.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: 0;
+            border-radius: 20px;
+        }
+
+        .welcome-section > * {
+            position: relative;
+            z-index: 1;
+        }
+
         .section-title {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.8rem;
@@ -2124,7 +2151,7 @@
         </section>
 
         <!-- Welcome Section -->
-        <section class="section section-accent">
+        <section class="section section-accent welcome-section">
             <h2 class="section-title" data-aos="fade-up" data-en="Welcome" data-es="Bienvenidos"><i class="ph-tree-palm" style="vertical-align: middle;"></i> Welcome <i class="ph-tree-palm" style="vertical-align: middle;"></i></h2>
             <p class="section-intro" data-aos="fade-up" data-aos-delay="200" data-en="It's hard to believe it's been five years since we said 'I do!' While our intimate COVID wedding was special, we've always dreamed of celebrating our marriage with our beloved family and friends. We can't wait to finally share this meaningful moment and dance the night away with everyone we love." data-es="¡Es difícil de creer que han pasado cinco años desde que dijimos 'Sí, acepto!' Aunque nuestra boda íntima durante COVID fue especial, siempre hemos soñado con celebrar nuestro matrimonio con nuestra querida familia y amigos. No podemos esperar a compartir finalmente este momento tan significativo y bailar toda la noche con todos los que amamos.">
                 It's hard to believe it's been five years since we said "I do!" While our intimate COVID wedding was special,
