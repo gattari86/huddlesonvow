@@ -1968,6 +1968,40 @@
             .detail-card::after {
                 display: none;
             }
+
+            /* Mobile optimization for travel help section */
+            .travel-help-section div[style*="padding: 2.5rem"] {
+                padding: 1.5rem !important;
+            }
+
+            .travel-help-section div[style*="width: 80px"] {
+                width: 60px !important;
+                height: 60px !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .travel-help-section div[style*="width: 80px"] i {
+                font-size: 1.5rem !important;
+            }
+
+            .travel-help-section h3[style*="font-size: 2rem"] {
+                font-size: 1.6rem !important;
+                margin-bottom: 1rem !important;
+            }
+
+            .travel-help-section p[style*="font-size: 1.1rem"] {
+                font-size: 1rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .travel-help-section h4[style*="font-size: 1.3rem"] {
+                font-size: 1.2rem !important;
+            }
+
+            .travel-help-section a[style*="padding: 1rem 2rem"] {
+                padding: 0.8rem 1.5rem !important;
+                font-size: 0.9rem !important;
+            }
         }
         /* Phosphor Icons Styling */
         i[class^="ph-"] {
@@ -2490,20 +2524,20 @@
 
         <!-- Travel Agent Contact -->
         <section class="section section-light" style="padding: 2rem 0;">
-            <div style="max-width: 500px; margin: 0 auto;">
-                <div style="background: var(--charcoal); border: 2px solid var(--sage); padding: 1.5rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); text-align: center;" data-aos="fade-up" data-aos-delay="200">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; background: var(--sage); color: white; width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 1rem auto;">
-                        <i class="ph ph-buildings" style="font-size: 1.5rem;"></i>
+            <div class="travel-help-section" style="max-width: 1000px; margin: 0 auto;">
+                <div style="background: var(--charcoal); border: 2px solid var(--sage); padding: 2.5rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                    <div style="display: inline-flex; align-items: center; justify-content: center; background: var(--sage); color: white; width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 2rem auto;">
+                        <i class="ph ph-buildings" style="font-size: 2rem;"></i>
                     </div>
-                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; margin-bottom: 0.75rem; color: white;" data-en="Need Travel Help?" data-es="¿Necesitas Ayuda con el Viaje?">Need Travel Help?</h3>
-                    <p style="color: rgba(255, 255, 255, 0.95); margin-bottom: 1rem; line-height: 1.5; font-size: 0.9rem;" data-en="Our recommended travel agent can assist with accommodations and hotel bookings." data-es="Nuestro agente de viajes recomendado puede ayudarte con alojamiento y reservas de hotel.">
+                    <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; margin-bottom: 1.5rem; color: white;" data-en="Need Travel Help?" data-es="¿Necesitas Ayuda con el Viaje?">Need Travel Help?</h3>
+                    <p style="color: rgba(255, 255, 255, 0.95); margin-bottom: 2rem; line-height: 1.6; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;" data-en="Our recommended travel agent can assist with accommodations and hotel bookings." data-es="Nuestro agente de viajes recomendado puede ayudarte con alojamiento y reservas de hotel.">
                         Our recommended travel agent can assist with accommodations and hotel bookings.
                     </p>
-                    <div style="margin-bottom: 1rem;">
-                        <h4 style="color: white; font-size: 1.1rem; margin-bottom: 0.25rem;">Alejandro Hernandez</h4>
-                        <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 1rem; font-size: 0.85rem;" data-en="Travel Specialist" data-es="Especialista en Viajes">Travel Specialist</p>
-                        <a href="https://wa.me/523333180018" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #25D366; color: white; padding: 0.6rem 1.2rem; border-radius: 8px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; box-shadow: 0 3px 15px rgba(37, 211, 102, 0.3); font-size: 0.9rem;" data-en="Contact via WhatsApp" data-es="Contactar por WhatsApp">
-                            <i class="ph ph-whatsapp-logo" style="font-size: 1rem;"></i>
+                    <div style="margin-bottom: 1.5rem;">
+                        <h4 style="color: white; font-size: 1.3rem; margin-bottom: 0.5rem; font-family: 'Cormorant Garamond', serif;">Alejandro Hernandez</h4>
+                        <p style="color: rgba(255, 255, 255, 0.9); margin-bottom: 2rem; font-size: 1rem;" data-en="Travel Specialist" data-es="Especialista en Viajes">Travel Specialist</p>
+                        <a href="https://wa.me/523333180018" target="_blank" style="display: inline-flex; align-items: center; gap: 0.75rem; background: #25D366; color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 500; transition: all 0.3s ease; box-shadow: 0 5px 25px rgba(37, 211, 102, 0.3); font-size: 1rem; font-family: 'Montserrat', sans-serif;" data-en="Contact via WhatsApp" data-es="Contactar por WhatsApp">
+                            <i class="ph ph-whatsapp-logo" style="font-size: 1.2rem;"></i>
                             <span data-en="Contact via WhatsApp" data-es="Contactar por WhatsApp">Contact via WhatsApp</span>
                         </a>
                     </div>
