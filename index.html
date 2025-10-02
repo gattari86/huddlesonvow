@@ -177,16 +177,6 @@
         }
 
         /* Decorative Elements */
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23F5E6D3'/%3E%3C/svg%3E") bottom center/cover no-repeat;
-            z-index: 3;
-        }
 
         .section-divider {
             height: 80px;
@@ -407,6 +397,32 @@
 
         .section-accent {
             background: var(--sand);
+        }
+
+        /* Things To Do Section with Background */
+        .things-section-bg {
+            position: relative;
+            background: var(--ivory);
+        }
+
+        .things-section-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('/assets/images/welcome-background.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .things-section-bg > * {
+            position: relative;
+            z-index: 1;
         }
 
         .section-title {
@@ -1906,9 +1922,6 @@
                 display: none;
             }
 
-            .hero::after {
-                height: 60px;
-            }
 
             /* Move hero image 15% to the left on mobile */
             .hero-bg {
@@ -2578,7 +2591,7 @@
         </section>
 
         <!-- Things To Do Section -->
-        <section id="things-section" class="section section-light">
+        <section id="things-section" class="section section-light things-section-bg">
             <h2 class="section-title" data-aos="fade-up" data-en="Things To Do in Riviera Maya" data-es="Qué Hacer en Riviera Maya">Things To Do in Riviera Maya</h2>
             <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100" data-en="Explore these amazing activities during your free time" data-es="Explora estas increíbles actividades durante tu tiempo libre">Explore these amazing activities during your free time</p>
 
