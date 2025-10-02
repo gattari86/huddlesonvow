@@ -2055,6 +2055,11 @@
         #family-section {
             position: relative;
             overflow: hidden;
+            background-image: url('/assets/images/our-story-bg.webp');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
 
         #family-section::before {
@@ -2064,18 +2069,22 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('/assets/images/our-story-bg.webp');
-            background-size: cover;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: scroll;
-            opacity: 0.5;
+            background: rgba(245, 230, 211, 0.5);
             z-index: 0;
+            pointer-events: none;
         }
 
         #family-section > * {
             position: relative;
             z-index: 1;
+        }
+
+        /* Mobile optimization for background */
+        @media (max-width: 768px) {
+            #family-section {
+                background-attachment: scroll;
+                background-size: cover;
+            }
         }
 
         /* Phosphor Icons Styling */
